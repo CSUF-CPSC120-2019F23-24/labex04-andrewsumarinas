@@ -30,7 +30,7 @@ int main()
   // longer alphabetic
 
   char my_char3 = 'z';
-  my_char3 = my_char3 + 1;     
+  my_char3 = my_char3 + 1;
 
   //the value is no longer alphabetic since the max end value has been reached
   std::cout << "Char2: \"z\", after adding +1, the value changed to " << my_char3 << std::endl;
@@ -55,9 +55,11 @@ int main()
   std::cout << "Short (" << sizeof(my_short2) << " bytes): "
     << std::dec << my_short2 << std::hex << " (0x" << my_short2 << ')';
 
+    // the value wrapped around the variable since the max value has been reached
   std::cout << ", after adding 1: " << std::dec << myShort2
     << std::hex << " (0x" << myShort2 << ")\n";
 
+    // the value incremented by once since the data type is an integer
   std::cout << "Int (" << sizeof(my_short2) << " bytes): "
     << std::dec << my_int2 << std::hex << " (0x" << my_int2 << ')';
 
@@ -78,12 +80,15 @@ int main()
   std::cout << "Unsigned short (" << sizeof(my_short3) << " bytes): "
     << std::dec << my_short3 << std::hex << " (0x" << my_short3 << ')';
 
+    // the value wrapped around the variable, and since the  the variable
+    // is unsigned, the value doesn't turn negative.
   std::cout << ", after adding 1: " << std::dec << myShort3
     << std::hex << " (0x" << myShort3 << ")\n";
 
   std::cout << "Same value as int (" << sizeof(my_int3) << " bytes): "
     << std::dec << my_int3 << std::hex << " (0x" << my_int3 << ')';
 
+    // the value incremented by once since the data type is an integer
   std::cout << ", after adding 1: " << std::dec << myInt3
     << std::hex << " (0x" << myInt3 << ")\n";
 
